@@ -31,13 +31,17 @@ social_media:
   # behance: your_username
   # dribbble: your_username
   # facebook: your_username
+  # hackerrank: your_username
   linkedin: ardalanamini
   medium: "@ardalanamini"
   stackoverflow: 10799650
   telegram: ardalanamini
   twitter: AminiArdalan
   # youtube: your_username
+  instagram: ardalan4real
+  # unsplash: your_username
   # vk: your_username
+  website: https://ardalanamini.com
 
 topics:
   - name: CSS

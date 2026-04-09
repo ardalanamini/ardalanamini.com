@@ -1,0 +1,20 @@
+{
+  "name": "ardalanamini.com",
+  "version": "1.0.0",
+  "description": "My Personal Portfolio",
+  "license": "MIT",
+  "author": "Ardalan Amini <ardalanamini22@gmail.com> (https://ardalanamini.com)",
+  "homepage": "https://ardalanamini.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardalanamini/ardalanamini.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ardalanamini/ardalanamini.com/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "main": "index.js"
+}

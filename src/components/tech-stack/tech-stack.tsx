@@ -16,7 +16,7 @@ export const TechStack = component$(() => {
     >
       <div class="mx-auto max-w-7xl">
         <div class="mb-16 text-center">
-          <h2 class="mb-4 text-4xl font-bold">Architecture Stack</h2>
+          <h2 class="mb-4 text-4xl font-bold">Tech Stack</h2>
           <p class="mx-auto max-w-xl text-gray-300">
             The foundational technologies I use to build scalable, secure, and
             performant backend infrastructures.

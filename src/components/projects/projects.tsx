@@ -69,7 +69,11 @@ export const Projects = component$(() => {
             >
               <div class="bg-line/30 border-line flex items-center justify-between border-b px-4 py-2">
                 <span class="text-[10px] font-bold tracking-widest text-gray-300 uppercase">
-                  {project.title.toLowerCase().replaceAll(" ", "_")}.git
+                  {project.title
+                    .toLowerCase()
+                    .replaceAll(".", "-")
+                    .replaceAll(" ", "_")}
+                  .git
                 </span>
                 <div class="h-2 w-2 animate-pulse rounded-full bg-green-500" />
               </div>
@@ -122,14 +126,6 @@ export const PROJECTS = [
     link: "https://github.com/foxifyjs/foxify",
   },
   {
-    title: "Prototyped.js",
-    description:
-      "Common Typescript ready helpers & prototypes available for both Server-Side and Client-Side applications.",
-    metrics: ["25 Stars", "MIT License", "v3.0.5"],
-    tech: ["TypeScript"],
-    link: "https://github.com/ardalanamini/prototyped.js",
-  },
-  {
     title: "Kutt.it Node.js Client",
     description:
       "Node.js & browser (TypeScript) client for Kutt url shortener.",
@@ -144,5 +140,13 @@ export const PROJECTS = [
     metrics: ["28 Stars", "MIT License", "v4.0.6"],
     tech: ["Node.js", "TypeScript", "GitHub Actions"],
     link: "https://github.com/ardalanamini/auto-changelog",
+  },
+  {
+    title: "Prototyped.js",
+    description:
+      "Common Typescript ready helpers & prototypes available for both Server-Side and Client-Side applications.",
+    metrics: ["25 Stars", "MIT License", "v3.0.5"],
+    tech: ["TypeScript"],
+    link: "https://github.com/ardalanamini/prototyped.js",
   },
 ];

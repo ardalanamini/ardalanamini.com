@@ -143,3 +143,7 @@ vite.config.ts.timestamp-*
 /lib
 /lib-types
 /server
+
+# Cloudflare
+functions/**/*.js
+.wrangler/

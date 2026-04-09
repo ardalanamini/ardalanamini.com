@@ -79,33 +79,56 @@ export const Experience = component$(() => {
   );
 });
 
-const EXPERIENCES = [
+export const EXPERIENCES = [
   {
-    company: "CloudScale Systems",
-    role: "Senior Backend Engineer",
-    period: "2022 — Present",
-    description:
-      "Leading the core infrastructure team. Optimized database queries resulting in 40% reduction in latency.",
+    company: "Xcoins",
+    role: "Senior Software Engineer - Back End Team Lead",
+    period: "Sep 2022 - Nov 2025",
+    description: "Crypto currency exchange and payment processing platform.",
     achievements: [
-      "Kubernetes Migration",
-      "Go Microservices",
-      "CI/CD Automation",
+      "Nest.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
     ],
   },
   {
-    company: "DataStream Corp",
-    role: "Backend Developer",
-    period: "2020 — 2022",
+    company: "AdaKerja",
+    role: "Senior Software Engineer",
+    period: "Jul 2020 — Jul 2022",
     description:
-      "Developed real-time data processing pipelines using Apache Kafka and Python.",
-    achievements: ["Kafka Integration", "ETL Optimization", "API Design"],
+      "Attendance & Payroll management system that consists of two sides, employers & job seekers.",
+    achievements: [
+      "Express.js",
+      "TypeScript",
+      "MongoDB",
+      "Docker",
+      "AWS Lambda",
+    ],
   },
   {
-    company: "SecureNet Solutions",
-    role: "Junior Software Engineer",
-    period: "2018 — 2020",
+    company: "AInfluencer",
+    role: "Senior Back End Developer",
+    period: "Jul 2019 — Jul 2020",
     description:
-      "Maintained legacy Java systems and assisted in the transition to a Node.js microservices architecture.",
-    achievements: ["Unit Testing", "Bug Fixing", "Documentation"],
+      "AI-based Instagram social marketing platform, editing, suggesting & automating posts & stories for influencers & connecting them to the suitable accounts for advertisement purposes.",
+    achievements: ["Express.js", "TypeScript", "Laravel", "MongoDB", "CI/CD"],
+  },
+  {
+    company: "Chibaki",
+    role: "Senior Back End Developer",
+    period: "Aug 2018 — Feb 2019",
+    description:
+      "Online platform to find local professionals suitable for the posted jobs that consisted of two sides, employers & professionals.",
+    achievements: ["Express.js", "Mongoose.js", "Jest", "MongoDB", "Docker"],
+  },
+  {
+    company: "Jahangostar Pars Raden",
+    role: "Software Engineer",
+    period: "Nov 2016 — Sep 2018",
+    description:
+      "Cloud based human resource management system allowing HR teams and business owners to manage and automate contracts, attendances, leaves & salaries.",
+    achievements: ["Laravel", "MariaDB", "React.js", "Redis", "Docker"],
   },
 ];

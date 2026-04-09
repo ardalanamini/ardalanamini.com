@@ -1,6 +1,8 @@
 import { component$ } from "@builder.io/qwik";
 import { LuActivity } from "@qwikest/icons/lucide";
 import { Motion } from "~/integrations/react/motion";
+import { EXPERIENCES } from "~/components/experience/experience";
+import { PROJECTS } from "~/components/projects/projects";
 
 export const Hero = component$(() => {
   return (
@@ -20,9 +22,7 @@ export const Hero = component$(() => {
             <span class="text-accent">Resilient</span> Systems.
           </h1>
           <p class="mb-8 max-w-lg text-lg leading-relaxed text-gray-400">
-            Backend Engineer specializing in distributed systems,
-            high-availability architectures, and performance optimization. I
-            build the invisible engines that power the modern web.
+            I build the invisible engines that power the modern web.
           </p>
           <div class="flex flex-wrap gap-4">
             <button
@@ -72,8 +72,9 @@ export const Hero = component$(() => {
               <span class="text-white">uptime</span>
             </div>
             <div class="text-gray-400">
-              up 5 years, 142 days, 12:44, 1 user, load average: 0.05, 0.03,
-              0.01
+              {new Date().getFullYear() - 2016} years, {EXPERIENCES.length}{" "}
+              roles, {PROJECTS.length}+ personal projects, 1 motivated software
+              engineer
             </div>
             <div class="mt-4 flex animate-pulse gap-2">
               <span class="text-green-500">➜</span>

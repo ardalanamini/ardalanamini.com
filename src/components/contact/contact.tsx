@@ -9,7 +9,7 @@ export const Contact = component$(() => {
     <section id="connect" class="bg-accent text-bg-dark px-6 py-20">
       <div class="mx-auto max-w-4xl text-center">
         <h2 class="mb-8 text-5xl font-black tracking-tighter uppercase md:text-7xl">
-          Initialize <br /> Connection.
+          Establish <br /> Connection
         </h2>
         <p class="mb-12 text-lg font-bold opacity-80">
           Available for architectural consulting and high-performance software

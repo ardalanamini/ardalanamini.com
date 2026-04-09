@@ -36,7 +36,7 @@ export const TechStack = component$(() => {
             >
               <div class="bg-line/30 border-line flex items-center justify-between border-b px-4 py-2">
                 <span class="text-[10px] font-bold tracking-widest text-gray-500 uppercase">
-                  {stack.name.toLowerCase()}.config
+                  {stack.name.toLowerCase().replaceAll(" ", "_")}.config
                 </span>
                 <div class="text-accent/50 group-hover:text-accent transition-colors">
                   {stack.icon}
@@ -63,7 +63,7 @@ export const TechStack = component$(() => {
   );
 });
 
-const TECH_STACK = [
+export const TECH_STACK = [
   {
     name: "Languages",
     icon: <LuCode class="h-5 w-5" />,

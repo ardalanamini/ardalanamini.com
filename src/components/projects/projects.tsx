@@ -23,8 +23,8 @@ export const Projects = component$(() => {
           </div>
           <div class="flex items-center gap-4">
             <div class="mr-4 text-right">
-              <span class="text-accent text-xs font-bold">
-                {PROJECTS.length.toString().padStart(2, "0")} REPOSITORIES
+              <span class="text-accent text-xs font-bold uppercase">
+                {PROJECTS.length.toString().padStart(2, "0")} Projects
               </span>
             </div>
             <div class="flex gap-2">
@@ -69,7 +69,7 @@ export const Projects = component$(() => {
             >
               <div class="bg-line/30 border-line flex items-center justify-between border-b px-4 py-2">
                 <span class="text-[10px] font-bold tracking-widest text-gray-500 uppercase">
-                  {project.title.toLowerCase().replace(/ /g, "-")}.git
+                  {project.title.toLowerCase().replaceAll(" ", "_")}.git
                 </span>
                 <div class="h-2 w-2 animate-pulse rounded-full bg-green-500" />
               </div>
@@ -112,53 +112,37 @@ export const Projects = component$(() => {
   );
 });
 
-const PROJECTS = [
+export const PROJECTS = [
   {
-    title: "Distributed Task Queue",
+    title: "Foxify",
     description:
-      "A high-throughput task processing system built with Go and Redis. Open sourced for the community.",
-    metrics: ["1.2k Stars", "MIT License", "v2.0.4"],
-    tech: ["Go", "Redis", "gRPC", "Docker"],
-    link: "#",
+      "A fast, easy to use & typescript ready web framework for Node.js",
+    metrics: ["152 Stars", "MIT License", "v0.10.7"],
+    tech: ["TypeScript", "Pnpm"],
+    link: "https://github.com/foxifyjs/foxify",
   },
   {
-    title: "Auth Sentinel",
+    title: "Prototyped.js",
     description:
-      "A zero-trust authentication library implementing OAuth2 and JWT. Secure by default.",
-    metrics: ["850 Stars", "Apache-2.0", "v1.1.0"],
-    tech: ["Node.js", "PostgreSQL", "Redis", "K8s"],
-    link: "#",
+      "Common Typescript ready helpers & prototypes available for both Server-Side and Client-Side applications.",
+    metrics: ["25 Stars", "MIT License", "v3.0.5"],
+    tech: ["TypeScript"],
+    link: "https://github.com/ardalanamini/prototyped.js",
   },
   {
-    title: "Data Pipeline Engine",
+    title: "Kutt.it Node.js Client",
     description:
-      "Real-time ETL pipeline for processing multi-terabyte datasets. Highly extensible.",
-    metrics: ["2.4k Stars", "GPL-3.0", "v3.2.1"],
-    tech: ["Python", "Apache Kafka", "Elasticsearch"],
-    link: "#",
+      "Node.js & browser (TypeScript) client for Kutt url shortener.",
+    metrics: ["40 Stars", "MIT License", "v3.0.2"],
+    tech: ["TypeScript"],
+    link: "https://github.com/ardalanamini/node-kutt",
   },
   {
-    title: "Log Aggregator",
+    title: "Github Automatic Changelog",
     description:
-      "Distributed logging system with real-time indexing and search capabilities.",
-    metrics: ["500 Stars", "MIT License", "v0.9.0"],
-    tech: ["Rust", "Elasticsearch", "Fluentd"],
-    link: "#",
-  },
-  {
-    title: "Metrics Exporter",
-    description:
-      "Prometheus-compatible metrics exporter for legacy system monitoring.",
-    metrics: ["320 Stars", "Apache-2.0", "v1.4.2"],
-    tech: ["Go", "Prometheus", "Grafana"],
-    link: "#",
-  },
-  {
-    title: "Service Mesh Controller",
-    description:
-      "Control plane for managing microservices traffic and security policies.",
-    metrics: ["1.1k Stars", "MIT License", "v2.1.0"],
-    tech: ["C++", "Envoy", "Istio"],
-    link: "#",
+      "A GitHub action that automatically generates changelogs from commit messages.",
+    metrics: ["28 Stars", "MIT License", "v4.0.6"],
+    tech: ["Node.js", "TypeScript", "GitHub Actions"],
+    link: "https://github.com/ardalanamini/auto-changelog",
   },
 ];

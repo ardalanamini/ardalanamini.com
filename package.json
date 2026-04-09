@@ -34,21 +34,19 @@
   },
   "engines-annotation": "Mostly required by sharp which needs a Node-API v9 compatible runtime",
   "type": "module",
-  "main": "index.js",
   "devDependencies": {
-    "@builder.io/qwik": "^1.19.2",
-    "@builder.io/qwik-city": "^1.19.2",
-    "@eslint/js": "^9",
+    "@builder.io/qwik": "1.19.2",
+    "@builder.io/qwik-city": "1.19.2",
+    "@eslint/js": "10.0.1",
     "@types/node": "20.19.0",
-    "eslint": "9.32.0",
-    "eslint-plugin-qwik": "^1.19.2",
-    "globals": "16.4.0",
-    "prettier": "3.6.2",
-    "typescript": "5.4.5",
-    "typescript-eslint": "8.38.0",
-    "typescript-plugin-css-modules": "latest",
-    "undici": "*",
-    "vite": "7.3.1",
-    "vite-tsconfig-paths": "^4.2.1"
+    "eslint": "10.2.0",
+    "eslint-plugin-qwik": "1.19.2",
+    "globals": "17.4.0",
+    "prettier": "3.8.1",
+    "typescript": "6.0.2",
+    "typescript-eslint": "8.58.1",
+    "typescript-plugin-css-modules": "5.2.0",
+    "undici": "8.0.2",
+    "vite": "8.0.8"
   }
 }

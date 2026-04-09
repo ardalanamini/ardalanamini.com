@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { LuActivity, LuCpu } from "@qwikest/icons/lucide";
+import { LuActivity } from "@qwikest/icons/lucide";
 import { Motion } from "~/integrations/react/motion";
 
 export const Hero = component$(() => {

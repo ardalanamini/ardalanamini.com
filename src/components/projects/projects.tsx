@@ -35,6 +35,7 @@ export const Projects = component$(() => {
                     ?.scrollBy({ left: -400, behavior: "smooth" })
                 }
                 class="border-line hover:border-accent hover:text-accent bg-bg-dark/50 rounded-lg border p-2 transition-colors"
+                aria-label="Previous project"
               >
                 <LuArrowLeft class="h-4 w-4" />
               </button>
@@ -45,6 +46,7 @@ export const Projects = component$(() => {
                     ?.scrollBy({ left: 400, behavior: "smooth" })
                 }
                 class="border-line hover:border-accent hover:text-accent bg-bg-dark/50 rounded-lg border p-2 transition-colors"
+                aria-label="Next project"
               >
                 <LuArrowRight class="h-4 w-4" />
               </button>

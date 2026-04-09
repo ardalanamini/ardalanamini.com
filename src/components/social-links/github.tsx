@@ -13,6 +13,7 @@ export const GithubLink = component$(
         rel="noopener noreferrer"
         target="_blank"
         class={clsx("hover:text-accent transition-colors", wrapperClass)}
+        aria-label="GitHub"
       >
         <LuGithub {...props} />
       </a>

@@ -13,6 +13,7 @@ export const TelegramLink = component$(
         rel="noopener noreferrer"
         target="_blank"
         class={clsx("hover:text-accent transition-colors", wrapperClass)}
+        aria-label="Telegram"
       >
         <SiTelegram {...props} />
       </a>

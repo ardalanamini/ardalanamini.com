@@ -13,6 +13,7 @@ export const LinkedInLink = component$(
         rel="noopener noreferrer"
         target="_blank"
         class={clsx("hover:text-accent transition-colors", wrapperClass)}
+        aria-label="LinkedIn"
       >
         <LuLinkedin {...props} />
       </a>

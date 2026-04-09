@@ -17,7 +17,7 @@ export const TechStack = component$(() => {
       <div class="mx-auto max-w-7xl">
         <div class="mb-16 text-center">
           <h2 class="mb-4 text-4xl font-bold">Architecture Stack</h2>
-          <p class="mx-auto max-w-xl text-gray-500">
+          <p class="mx-auto max-w-xl text-gray-300">
             The foundational technologies I use to build scalable, secure, and
             performant backend infrastructures.
           </p>
@@ -35,10 +35,10 @@ export const TechStack = component$(() => {
               class="terminal-window group hover:border-accent/50 transition-colors"
             >
               <div class="bg-line/30 border-line flex items-center justify-between border-b px-4 py-2">
-                <span class="text-[10px] font-bold tracking-widest text-gray-500 uppercase">
+                <span class="text-[10px] font-bold tracking-widest text-gray-300 uppercase">
                   {stack.name.toLowerCase().replaceAll(" ", "_")}.config
                 </span>
-                <div class="text-accent/50 group-hover:text-accent transition-colors">
+                <div class="text-accent/80 group-hover:text-accent transition-colors">
                   {stack.icon}
                 </div>
               </div>
@@ -48,7 +48,7 @@ export const TechStack = component$(() => {
                   {stack.items.map((item) => (
                     <li
                       key={item}
-                      class="flex items-center gap-2 text-sm text-gray-500"
+                      class="flex items-center gap-2 text-sm text-gray-300"
                     >
                       <LuChevronRight class="text-accent h-3 w-3" /> {item}
                     </li>

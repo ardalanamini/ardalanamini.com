@@ -24,15 +24,15 @@ export const Contact = component$(() => {
           </a>
           <div class="flex gap-4">
             <GithubLink
-              wrapperClass="border-bg-dark/20 hover:bg-bg-dark rounded-full border-2 p-5 transition-all hover:text-white"
+              wrapperClass="border-bg-dark/40 hover:bg-bg-dark rounded-full border-2 p-5 transition-all hover:text-white"
               class="h-6 w-6"
             />
             <LinkedInLink
-              wrapperClass="border-bg-dark/20 hover:bg-bg-dark rounded-full border-2 p-5 transition-all hover:text-white"
+              wrapperClass="border-bg-dark/40 hover:bg-bg-dark rounded-full border-2 p-5 transition-all hover:text-white"
               class="h-6 w-6"
             />
             <TelegramLink
-              wrapperClass="border-bg-dark/20 hover:bg-bg-dark rounded-full border-2 p-5 transition-all hover:text-white"
+              wrapperClass="border-bg-dark/40 hover:bg-bg-dark rounded-full border-2 p-5 transition-all hover:text-white"
               class="h-6 w-6"
             />
           </div>

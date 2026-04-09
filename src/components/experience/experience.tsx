@@ -8,7 +8,7 @@ export const Experience = component$(() => {
       <div class="mx-auto max-w-4xl">
         <div class="mb-16">
           <h2 class="mb-2 text-3xl font-bold">Experience</h2>
-          <p class="text-sm tracking-widest text-gray-500 uppercase">
+          <p class="text-sm tracking-widest text-gray-400 uppercase">
             System Logs // Professional Experience
           </p>
         </div>
@@ -35,20 +35,20 @@ export const Experience = component$(() => {
                   <span class="text-accent text-[10px] font-bold tracking-widest uppercase">
                     {exp.period}
                   </span>
-                  <span class="text-[10px] font-bold tracking-widest text-gray-500 uppercase">
+                  <span class="text-[10px] font-bold tracking-widest text-gray-300 uppercase">
                     {exp.company}
                   </span>
                 </div>
                 <div class="p-6">
                   <h3 class="mb-2 text-xl font-bold">{exp.role}</h3>
-                  <p class="mb-4 text-sm leading-relaxed text-gray-400">
+                  <p class="mb-4 text-sm leading-relaxed text-gray-300">
                     {exp.description}
                   </p>
                   <div class="flex flex-wrap gap-3">
                     {exp.achievements.map((achievement) => (
                       <div
                         key={achievement}
-                        class="bg-line/20 flex items-center gap-2 rounded px-2 py-1 text-[9px] font-bold tracking-tighter text-gray-500 uppercase"
+                        class="bg-line/20 flex items-center gap-2 rounded px-2 py-1 text-[9px] font-bold tracking-tighter text-gray-300 uppercase"
                       >
                         <LuChevronRight class="text-accent h-3 w-3" />{" "}
                         {achievement}
@@ -69,7 +69,7 @@ export const Experience = component$(() => {
             class="relative flex items-center gap-4 pl-12"
           >
             <div class="bg-line absolute top-0 left-3.25 h-2.75 w-2.75 rotate-45" />
-            <span class="text-[10px] font-bold tracking-[0.3em] text-gray-600 uppercase">
+            <span class="text-[10px] font-bold tracking-[0.3em] text-gray-400 uppercase">
               -- END_OF_LOG --
             </span>
           </Motion>

@@ -17,7 +17,7 @@ export const Projects = component$(() => {
         <div class="mb-16 flex flex-col items-end justify-between gap-6 md:flex-row">
           <div>
             <h2 class="mb-2 text-3xl font-bold">Projects</h2>
-            <p class="text-sm tracking-widest text-gray-500 uppercase">
+            <p class="text-sm tracking-widest text-gray-400 uppercase">
               Open Source Repositories & Contributions
             </p>
           </div>
@@ -68,13 +68,13 @@ export const Projects = component$(() => {
               class="terminal-window group hover:border-accent/50 min-w-[320px] snap-start transition-colors md:min-w-100"
             >
               <div class="bg-line/30 border-line flex items-center justify-between border-b px-4 py-2">
-                <span class="text-[10px] font-bold tracking-widest text-gray-500 uppercase">
+                <span class="text-[10px] font-bold tracking-widest text-gray-300 uppercase">
                   {project.title.toLowerCase().replaceAll(" ", "_")}.git
                 </span>
                 <div class="h-2 w-2 animate-pulse rounded-full bg-green-500" />
               </div>
               <div class="p-6">
-                <p class="mb-6 text-sm text-gray-400">{project.description}</p>
+                <p class="mb-6 text-sm text-gray-300">{project.description}</p>
                 <div class="mb-6 space-y-2">
                   {project.metrics.map((metric) => (
                     <div
@@ -89,7 +89,7 @@ export const Projects = component$(() => {
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      class="bg-line/50 border-line rounded border px-2 py-1 text-[9px] text-gray-400"
+                      class="bg-line/50 border-line rounded border px-2 py-1 text-[9px] text-gray-300"
                     >
                       {t}
                     </span>

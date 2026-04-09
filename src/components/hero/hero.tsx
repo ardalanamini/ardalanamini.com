@@ -21,7 +21,7 @@ export const Hero = component$(() => {
             Engineering <br />
             <span class="text-accent">Resilient</span> Systems.
           </h1>
-          <p class="mb-8 max-w-lg text-lg leading-relaxed text-gray-400">
+          <p class="mb-8 max-w-lg text-lg leading-relaxed text-gray-300">
             I build the invisible engines that power the modern web.
           </p>
           <div class="flex flex-wrap gap-4">
@@ -50,7 +50,7 @@ export const Hero = component$(() => {
               <span class="text-blue-400">~</span>
               <span class="text-white">whoami</span>
             </div>
-            <div class="mb-4 text-gray-400">
+            <div class="mb-4 text-gray-300">
               I'm Ardalan Amini, Software Engineer specializing in distributed
               systems, high-performance infrastructure, and scalable cloud
               solutions.
@@ -71,7 +71,7 @@ export const Hero = component$(() => {
               <span class="text-blue-400">~</span>
               <span class="text-white">uptime</span>
             </div>
-            <div class="text-gray-400">
+            <div class="text-gray-300">
               {new Date().getFullYear() - 2016} years, {EXPERIENCES.length}{" "}
               roles, {PROJECTS.length}+ personal projects, 1 motivated software
               engineer
@@ -91,10 +91,10 @@ export const Hero = component$(() => {
 const TerminalHeader = component$(() => {
   return (
     <div class="terminal-header">
-      <div class="dot bg-red-500/50" />
-      <div class="dot bg-yellow-500/50" />
-      <div class="dot bg-green-500/50" />
-      <div class="ml-2 font-mono text-[10px] tracking-widest uppercase opacity-40">
+      <div class="dot bg-red-400/80" />
+      <div class="dot bg-yellow-300/80" />
+      <div class="dot bg-green-400/80" />
+      <div class="ml-2 font-mono text-[10px] tracking-widest text-gray-400 uppercase">
         bash — 80x24
       </div>
     </div>

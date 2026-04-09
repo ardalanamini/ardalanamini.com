@@ -1,4 +1,13 @@
 {
+  "lsp": {
+    "eslint": {
+      "settings": {
+        "experimental": {
+          "useFlatConfig": false,
+        },
+      },
+    },
+  },
   "file_scan_exclusions": [
     "server",
     "**/.git",

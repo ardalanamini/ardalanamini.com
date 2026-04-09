@@ -60,7 +60,7 @@ export const Hero = component$(() => {
               <span class="text-blue-400">~</span>
               <span class="text-white">ls skills/core</span>
             </div>
-            <div class="text-accent mb-4 grid grid-cols-2 gap-2">
+            <div class="text-accent mb-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               <div>• Distributed_Systems</div>
               <div>• API_Design</div>
               <div>• Database_Optimization</div>
@@ -72,9 +72,9 @@ export const Hero = component$(() => {
               <span class="text-white">uptime</span>
             </div>
             <div class="text-gray-300">
-              {new Date().getFullYear() - 2016} years, {EXPERIENCES.length}{" "}
-              roles, {PROJECTS.length}+ personal projects, 1 motivated software
-              engineer
+              {new Date().getFullYear() - 2016} years of experience,{" "}
+              {EXPERIENCES.length} roles, {PROJECTS.length}+ personal projects,
+              1 motivated software engineer
             </div>
             <div class="mt-4 flex animate-pulse gap-2">
               <span class="text-green-500">➜</span>

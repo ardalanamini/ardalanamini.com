@@ -18,7 +18,7 @@ export const Contact = component$(() => {
         <div class="flex flex-wrap justify-center gap-6">
           <a
             href="mailto:ardalanamini22@gmail.com"
-            class="bg-bg-dark flex items-center gap-3 px-10 py-5 font-bold tracking-widest text-white uppercase transition-transform hover:scale-105"
+            class="bg-bg-dark flex items-center gap-3 rounded-lg px-10 py-5 font-bold tracking-widest text-white uppercase transition-transform hover:scale-105"
           >
             <LuMail class="h-5 w-5" /> Send Packet
           </a>

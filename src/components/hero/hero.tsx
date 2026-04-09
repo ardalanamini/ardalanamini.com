@@ -29,7 +29,7 @@ export const Hero = component$(() => {
               onClick$={() =>
                 document.getElementById("connect")?.scrollIntoView()
               }
-              class="bg-accent text-bg-dark px-8 py-4 text-sm font-bold tracking-widest uppercase transition-colors hover:bg-white"
+              class="bg-accent text-bg-dark rounded-lg px-8 py-4 text-sm font-bold tracking-widest uppercase transition-colors hover:bg-white"
             >
               Contact Me
             </button>

@@ -29,8 +29,8 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "serve": "wrangler dev",
-    "qwik": "qwik",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "qwik": "qwik"
   },
   "engines": {
     "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
@@ -41,11 +41,14 @@
     "@builder.io/qwik": "1.19.2",
     "@builder.io/qwik-city": "1.19.2",
     "@eslint/js": "10.0.1",
+    "@tailwindcss/vite": "4.2.2",
     "@types/node": "20.19.0",
     "eslint": "10.2.0",
     "eslint-plugin-qwik": "1.19.2",
     "globals": "17.4.0",
     "prettier": "3.8.1",
+    "prettier-plugin-tailwindcss": "0.7.2",
+    "tailwindcss": "4.2.2",
     "typescript": "6.0.2",
     "typescript-eslint": "8.58.1",
     "typescript-plugin-css-modules": "5.2.0",

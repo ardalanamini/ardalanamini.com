@@ -1,7 +1,9 @@
 {
   "file_scan_exclusions": [
+    "server",
     "**/.git",
     "**/node_modules",
+    "**/dist",
     "**/.DS_Store",
     "**/*.tsbuildinfo",
   ],

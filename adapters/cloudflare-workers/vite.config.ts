@@ -10,6 +10,12 @@ export default extendConfig(baseConfig, () => {
         input: ["src/entry.cloudflare-pages.tsx", "@qwik-city-plan"],
       },
     },
-    plugins: [cloudflareWorkersAdapter()],
+    plugins: [cloudflareWorkersAdapter({
+      ssg: {
+        include: ["/*"],
+        origin: 'https://ardalanamini.com',
+        sitemapOutFile: 'sitemap.xml',
+      },
+    })],
   };
 });

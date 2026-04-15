@@ -10,6 +10,7 @@
   },
   "file_scan_exclusions": [
     "server",
+    "tmp",
     "**/.git",
     "**/.wrangler",
     "**/node_modules",

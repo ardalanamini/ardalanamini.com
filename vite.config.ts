@@ -8,6 +8,9 @@ import { qwikCity } from "@builder.io/qwik-city/vite";
 import pkg from "./package.json";
 import tailwindcss from "@tailwindcss/vite";
 import { qwikReact } from "@builder.io/qwik-react/vite";
+import { partytownVite } from "@qwik.dev/partytown/utils";
+import { join } from "node:path";
+
 type PkgDep = Record<string, string>;
 
 const { dependencies = {}, devDependencies = {} } = pkg as any as {
@@ -27,7 +30,13 @@ export default defineConfig(({ command, mode }): UserConfig => {
     resolve: {
       tsconfigPaths: true,
     },
-    plugins: [qwikCity(), qwikVite(), tailwindcss(), qwikReact()],
+    plugins: [
+      qwikCity(),
+      qwikVite(),
+      tailwindcss(),
+      qwikReact(),
+      partytownVite({ dest: join(__dirname, "dist", "~partytown") }),
+    ],
     // This tells Vite which dependencies to pre-build in dev mode.
     optimizeDeps: {
       // Put problematic deps that break bundling here, mostly those with binaries.

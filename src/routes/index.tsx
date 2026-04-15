@@ -35,5 +35,27 @@ export const head: DocumentHead = {
       name: "description",
       content: "Ardalan Amini Personal Website",
     },
+
+    // Facebook Meta Tags
+    {
+      property: "og:url",
+      content: "https://ardalanamini.com",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      property: "og:title",
+      content: "Ardalan Amini",
+    },
+    {
+      property: "og:description",
+      content: "Ardalan Amini Personal Website",
+    },
+    {
+      property: "og:image",
+      content: "/og.webp",
+    },
   ],
 };

@@ -36,10 +36,28 @@ export const head: DocumentHead = {
       content: "Ardalan Amini Personal Website",
     },
 
+    // Twitter Meta Tags
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Ardalan Amini",
+    },
+    {
+      name: "twitter:description",
+      content: "Ardalan Amini Personal Website",
+    },
+    {
+      name: "twitter:image",
+      content: "https://ardalanamini.com/og.webp",
+    },
+
     // Facebook Meta Tags
     {
       property: "og:url",
-      content: "https://ardalanamini.com",
+      content: "https://ardalanamini.com/",
     },
     {
       property: "og:type",
@@ -55,7 +73,11 @@ export const head: DocumentHead = {
     },
     {
       property: "og:image",
-      content: "/og.webp",
+      content: "https://ardalanamini.com/og.webp",
+    },
+    {
+      property: "og:image:alt",
+      content: "Ardalan Amini",
     },
   ],
 };

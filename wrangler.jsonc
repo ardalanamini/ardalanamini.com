@@ -6,14 +6,21 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "ardalanamini-com",
   "main": "./dist/_worker.js",
-  "compatibility_date": "2026-04-09",
+  "compatibility_date": "2026-05-26",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
-    "binding": "ASSET",
+    "binding": "ASSETS",
     "directory": "./dist",
   },
   "observability": {
     "enabled": true,
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true,
+    },
+    "traces": {
+      "enabled": true,
+    },
   },
   "routes": [
     {

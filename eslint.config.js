@@ -35,7 +35,6 @@ const ignores = [
   "**/.rollup.cache",
   "**/dist",
   "**/tsconfig.tsbuildinfo",
-  "**/vite.config.ts",
   "**/*.spec.tsx",
   "**/*.spec.ts",
   "**/.netlify",
@@ -44,6 +43,8 @@ const ignores = [
   "**/yarn.lock",
   "**/server",
   "eslint.config.js",
+  "prettier.config.js",
+  "worker-configuration.d.ts",
 ];
 
 export default tseslint.config(

@@ -2,7 +2,7 @@
  * This is the base config for vite.
  * When building, the adapter config is used which loads this file and extends it.
  */
-import { defineConfig, type UserConfig } from "vite";
+import { type UserConfig, defineConfig } from "vite";
 import { qwikVite } from "@builder.io/qwik/optimizer";
 import { qwikCity } from "@builder.io/qwik-city/vite";
 import pkg from "./package.json";
@@ -25,10 +25,12 @@ errorOnDuplicatesPkgDeps(devDependencies, dependencies);
  * Note that Vite normally starts from `index.html` but the qwikCity plugin makes start at `src/entry.ssr.tsx` instead.
  */
 
-export default defineConfig(({ command, mode }): UserConfig => {
+export default defineConfig((): UserConfig => {
   return {
     resolve: {
-      tsconfigPaths: true,
+      alias: {
+        "~": join(__dirname, "src"),
+      },
     },
     plugins: [
       qwikCity(),
@@ -87,7 +89,6 @@ function errorOnDuplicatesPkgDeps(
   devDependencies: PkgDep,
   dependencies: PkgDep,
 ) {
-  let msg = "";
   // Create an array 'duplicateDeps' by filtering devDependencies.
   // If a dependency also exists in dependencies, it is considered a duplicate.
   const duplicateDeps = Object.keys(devDependencies).filter(
@@ -101,21 +102,19 @@ function errorOnDuplicatesPkgDeps(
 
   // any errors for missing "qwik-city-plan"
   // [PLUGIN_ERROR]: Invalid module "@qwik-city-plan" is not a valid package
-  msg = `Move qwik packages ${qwikPkg.join(", ")} to devDependencies`;
-
   if (qwikPkg.length > 0) {
-    throw new Error(msg);
+    throw new Error(
+      `Move qwik packages ${qwikPkg.join(", ")} to devDependencies`,
+    );
   }
 
   // Format the error message with the duplicates list.
   // The `join` function is used to represent the elements of the 'duplicateDeps' array as a comma-separated string.
-  msg = `
-    Warning: The dependency "${duplicateDeps.join(", ")}" is listed in both "devDependencies" and "dependencies".
-    Please move the duplicated dependencies to "devDependencies" only and remove it from "dependencies"
-  `;
-
   // Throw an error with the constructed message.
   if (duplicateDeps.length > 0) {
-    throw new Error(msg);
+    throw new Error(`
+      Warning: The dependency "${duplicateDeps.join(", ")}" is listed in both "devDependencies" and "dependencies".
+      Please move the duplicated dependencies to "devDependencies" only and remove it from "dependencies"
+    `);
   }
 }

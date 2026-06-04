@@ -6,7 +6,7 @@ import {
   LuServer,
   LuShieldCheck,
 } from "@qwikest/icons/lucide";
-import { Motion } from "~/integrations/react/motion";
+import { revealOnce$ } from "~/integrations/reveal";
 
 export const TechStack = component$(() => {
   return (
@@ -25,13 +25,11 @@ export const TechStack = component$(() => {
 
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {TECH_STACK.map((stack, index) => (
-            <Motion
-              client:visible
+            <div
               key={stack.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              data-reveal="up"
+              onQVisible$={revealOnce$}
+              style={{ "--reveal-delay": `${index * 100}ms` }}
               class="terminal-window group hover:border-accent/50 transition-colors"
             >
               <div class="bg-line/30 border-line flex items-center justify-between border-b px-4 py-2">
@@ -55,7 +53,7 @@ export const TechStack = component$(() => {
                   ))}
                 </ul>
               </div>
-            </Motion>
+            </div>
           ))}
         </div>
       </div>

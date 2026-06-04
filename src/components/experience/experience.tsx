@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { LuActivity, LuChevronRight } from "@qwikest/icons/lucide";
-import { Motion } from "~/integrations/react/motion";
+import { revealOnce$ } from "~/integrations/reveal";
 
 export const Experience = component$(() => {
   return (
@@ -15,13 +15,11 @@ export const Experience = component$(() => {
 
         <div class="relative space-y-12">
           {EXPERIENCES.map((exp, index) => (
-            <Motion
-              client:visible
+            <div
               key={exp.company}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              data-reveal="left"
+              onQVisible$={revealOnce$}
+              style={{ "--reveal-delay": `${index * 100}ms` }}
               class="relative my-12 pl-12"
             >
               {/* Connection Line */}
@@ -57,22 +55,20 @@ export const Experience = component$(() => {
                   </div>
                 </div>
               </div>
-            </Motion>
+            </div>
           ))}
 
           {/* End of Log Marker */}
-          <Motion
-            client:visible
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+          <div
+            data-reveal="fade"
+            onQVisible$={revealOnce$}
             class="relative flex items-center gap-4 pl-12"
           >
             <div class="bg-line absolute top-0 left-3.25 h-2.75 w-2.75 rotate-45" />
             <span class="text-[10px] font-bold tracking-[0.3em] text-gray-400 uppercase">
               -- END_OF_LOG --
             </span>
-          </Motion>
+          </div>
         </div>
       </div>
     </section>

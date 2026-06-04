@@ -17,6 +17,9 @@ export default component$(() => {
     <QwikCityProvider>
       <head>
         <meta charset="utf-8" />
+        <script
+          dangerouslySetInnerHTML={`document.documentElement.classList.add("reveals-ready");`}
+        />
 
         <QwikPartytown forward={["gtag", "dataLayer.push"]} />
 

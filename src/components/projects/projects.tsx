@@ -5,7 +5,7 @@ import {
   LuChevronRight,
   LuExternalLink,
 } from "@qwikest/icons/lucide";
-import { Motion } from "~/integrations/react/motion";
+import { revealOnce$ } from "~/integrations/reveal";
 
 export const Projects = component$(() => {
   return (
@@ -60,13 +60,11 @@ export const Projects = component$(() => {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {PROJECTS.map((project, index) => (
-            <Motion
-              client:visible
+            <div
               key={project.title}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              data-reveal="scale"
+              onQVisible$={revealOnce$}
+              style={{ "--reveal-delay": `${index * 100}ms` }}
               class="terminal-window group hover:border-accent/50 min-w-[320px] snap-start transition-colors md:min-w-100"
             >
               <div class="bg-line/30 border-line flex items-center justify-between border-b px-4 py-2">
@@ -110,7 +108,7 @@ export const Projects = component$(() => {
                   View Source <LuExternalLink class="h-3 w-3" />
                 </a>
               </div>
-            </Motion>
+            </div>
           ))}
         </div>
       </div>

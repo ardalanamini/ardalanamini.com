@@ -59,3 +59,56 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+[data-reveal] {
+  --reveal-delay: 0ms;
+  --reveal-duration: 500ms;
+  --reveal-x: 0;
+  --reveal-y: 0;
+  --reveal-scale: 1;
+}
+
+html.reveals-ready [data-reveal] {
+  opacity: 0;
+  transform: translate3d(var(--reveal-x), var(--reveal-y), 0)
+    scale(var(--reveal-scale));
+}
+
+html.reveals-ready [data-reveal][data-revealed] {
+  animation: reveal-once var(--reveal-duration) ease-out var(--reveal-delay)
+    both;
+}
+
+html.reveals-ready [data-reveal="left"] {
+  --reveal-x: -20px;
+}
+
+html.reveals-ready [data-reveal="up"] {
+  --reveal-y: 20px;
+}
+
+html.reveals-ready [data-reveal="scale"] {
+  --reveal-scale: 0.95;
+}
+
+@keyframes reveal-once {
+  from {
+    opacity: 0;
+    transform: translate3d(var(--reveal-x), var(--reveal-y), 0)
+      scale(var(--reveal-scale));
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.reveals-ready [data-reveal],
+  html.reveals-ready [data-reveal][data-revealed] {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}

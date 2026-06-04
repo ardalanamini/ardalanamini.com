@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { LuActivity } from "@qwikest/icons/lucide";
-import { Motion } from "~/integrations/react/motion";
+import { revealOnce$ } from "~/integrations/reveal";
 import { EXPERIENCES } from "~/components/experience/experience";
 import { PROJECTS } from "~/components/projects/projects";
 
@@ -8,12 +8,7 @@ export const Hero = component$(() => {
   return (
     <section class="px-6 pt-40 pb-20">
       <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-        <Motion
-          client:visible
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div data-reveal="left" onQVisible$={revealOnce$}>
           <div class="bg-accent/10 border-accent/20 text-accent mb-6 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-[10px] font-bold tracking-widest uppercase">
             <LuActivity class="h-3 w-3" /> Open for Opportunities
           </div>
@@ -34,13 +29,12 @@ export const Hero = component$(() => {
               Contact Me
             </button>
           </div>
-        </Motion>
+        </div>
 
-        <Motion
-          client:visible
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+        <div
+          data-reveal="scale"
+          onQVisible$={revealOnce$}
+          style={{ "--reveal-delay": "200ms" }}
           class="terminal-window"
         >
           <TerminalHeader />
@@ -82,7 +76,7 @@ export const Hero = component$(() => {
               <span class="bg-accent h-5 w-2" />
             </div>
           </div>
-        </Motion>
+        </div>
       </div>
     </section>
   );

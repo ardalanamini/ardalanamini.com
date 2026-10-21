@@ -1,8 +1,8 @@
 import { component$ } from "@builder.io/qwik";
-import { LuCpu } from "@qwikest/icons/lucide";
 import { GithubLink } from "~/components/social-links/github";
 import { LinkedInLink } from "~/components/social-links/linkedin";
 import { TelegramLink } from "~/components/social-links/telegram";
+import { CPUIcon } from "~/icons/cpu";
 
 export const Header = component$(() => (
   <nav class="border-line bg-bg-dark/80 fixed top-0 right-0 left-0 z-50 border-b px-6 py-4 backdrop-blur-md">
@@ -11,7 +11,7 @@ export const Header = component$(() => (
         onClick$={() => window.scrollTo({ top: 0 })}
         class="group flex cursor-pointer items-center gap-2"
       >
-        <LuCpu class="text-accent h-5 w-5 transition-transform group-hover:rotate-12" />
+        <CPUIcon class="text-accent h-5 w-5 transition-transform group-hover:rotate-12" />
 
         <span class="font-bold tracking-tighter text-white">
           ARDALAN_AMINI

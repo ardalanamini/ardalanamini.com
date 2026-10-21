@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
-import { LuActivity } from "@qwikest/icons/lucide";
 import { EXPERIENCES } from "~/components/experience/experience";
 import { PROJECTS } from "~/components/projects/projects";
+import { ActivityIcon } from "~/icons/activity";
 import { revealOnce$ } from "~/integrations/reveal";
 
 const TerminalHeader = component$(() => (
@@ -24,7 +24,7 @@ export const Hero = component$(() => (
           class="bg-accent/10 border-accent/20 text-accent mb-6 inline-flex items-center gap-2 rounded-full border
             px-3 py-1 text-[10px] font-bold tracking-widest uppercase"
         >
-          <LuActivity class="h-3 w-3" />
+          <ActivityIcon class="h-3 w-3" />
           {" "}
           Open for Opportunities
         </div>

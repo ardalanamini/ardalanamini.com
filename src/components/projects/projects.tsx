@@ -1,10 +1,8 @@
 import { component$ } from "@builder.io/qwik";
-import {
-  LuArrowLeft,
-  LuArrowRight,
-  LuChevronRight,
-  LuExternalLink,
-} from "@qwikest/icons/lucide";
+import { ArrowLeftIcon } from "~/icons/arrow-left";
+import { ArrowRightIcon } from "~/icons/arrow-right";
+import { ChevronRightIcon } from "~/icons/chevron-right";
+import { ExternalLinkIcon } from "~/icons/external-link";
 import { revealOnce$ } from "~/integrations/reveal";
 
 export const PROJECTS = [
@@ -76,7 +74,7 @@ export const Projects = component$(() => (
                 transition-colors"
               aria-label="Previous project"
             >
-              <LuArrowLeft class="h-4 w-4" />
+              <ArrowLeftIcon class="h-4 w-4" />
             </button>
 
             <button
@@ -90,7 +88,7 @@ export const Projects = component$(() => (
                 transition-colors"
               aria-label="Next project"
             >
-              <LuArrowRight class="h-4 w-4" />
+              <ArrowRightIcon class="h-4 w-4" />
             </button>
           </div>
         </div>
@@ -134,7 +132,7 @@ export const Projects = component$(() => (
                     key={metric}
                     class="text-accent flex items-center gap-2 text-[10px] font-bold tracking-tighter uppercase"
                   >
-                    <LuChevronRight class="h-3 w-3" />
+                    <ChevronRightIcon class="h-3 w-3" />
                     {" "}
                     {metric}
                   </div>
@@ -160,7 +158,7 @@ export const Projects = component$(() => (
               >
                 View Source
                 {" "}
-                <LuExternalLink class="h-3 w-3" />
+                <ExternalLinkIcon class="h-3 w-3" />
               </a>
             </div>
           </div>

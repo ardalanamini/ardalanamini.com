@@ -43,7 +43,6 @@
     "@builder.io/qwik": "1.20.2",
     "@builder.io/qwik-city": "1.20.2",
     "@qwik.dev/partytown": "1.0.1",
-    "@qwikest/icons": "0.0.13",
     "@tailwindcss/vite": "4.3.3",
     "@types/node": "26.6.5",
     "eslint-plugin-qwik": "1.20.2",

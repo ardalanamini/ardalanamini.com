@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
-import { LuActivity, LuChevronRight } from "@qwikest/icons/lucide";
+import { ActivityIcon } from "~/icons/activity";
+import { ChevronRightIcon } from "~/icons/chevron-right";
 import { revealOnce$ } from "~/integrations/reveal";
 
 export const EXPERIENCES = [
@@ -87,7 +88,7 @@ export const Experience = component$(() => (
               class="bg-bg-dark border-accent absolute top-1.5 left-0 z-10 flex h-9 w-9 items-center justify-center
                 rounded-full border-2"
             >
-              <LuActivity class="text-accent h-4 w-4" />
+              <ActivityIcon class="text-accent h-4 w-4" />
             </div>
 
             <div class="terminal-window">
@@ -115,7 +116,7 @@ export const Experience = component$(() => (
                       class="bg-line/20 flex items-center gap-2 rounded px-2 py-1 text-[9px] font-bold tracking-tighter
                         text-gray-300 uppercase"
                     >
-                      <LuChevronRight class="text-accent h-3 w-3" />
+                      <ChevronRightIcon class="text-accent h-3 w-3" />
                       {" "}
                       {achievement}
                     </div>

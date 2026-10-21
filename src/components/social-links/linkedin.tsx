@@ -1,5 +1,5 @@
 import { type SVGProps, component$ } from "@builder.io/qwik";
-import { LuLinkedin } from "@qwikest/icons/lucide";
+import { LinkedInIcon } from "~/icons/linkedin";
 
 export const LinkedInLink = component$(({
   wrapperClass,
@@ -12,6 +12,6 @@ export const LinkedInLink = component$(({
     class={["hover:text-accent transition-colors", wrapperClass]}
     aria-label="LinkedIn"
   >
-    <LuLinkedin {...properties} />
+    <LinkedInIcon {...properties} />
   </a>
 ));

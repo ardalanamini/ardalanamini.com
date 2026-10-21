@@ -1,32 +1,30 @@
 import { component$ } from "@builder.io/qwik";
-import {
-  LuChevronRight,
-  LuCode,
-  LuDatabase,
-  LuServer,
-  LuShieldCheck,
-} from "@qwikest/icons/lucide";
+import { ChevronRightIcon } from "~/icons/chevron-right";
+import { CodeIcon } from "~/icons/code";
+import { DatabaseIcon } from "~/icons/database";
+import { ServerIcon } from "~/icons/server";
+import { ShieldCheckIcon } from "~/icons/shield-check";
 import { revealOnce$ } from "~/integrations/reveal";
 
 const TECH_STACK = [
   {
     name : "Languages",
-    icon : <LuCode class="h-5 w-5" />,
+    icon : <CodeIcon class="h-5 w-5" />,
     items: ["TypeScript", "Go", "PHP", "C++"],
   },
   {
     name : "Databases & Storage",
-    icon : <LuDatabase class="h-5 w-5" />,
+    icon : <DatabaseIcon class="h-5 w-5" />,
     items: ["MongoDB", "PostgreSQL", "Redis", "S3"],
   },
   {
     name : "Infrastructure",
-    icon : <LuServer class="h-5 w-5" />,
+    icon : <ServerIcon class="h-5 w-5" />,
     items: ["Kubernetes", "Docker", "AWS", "Terraform"],
   },
   {
     name : "Security",
-    icon : <LuShieldCheck class="h-5 w-5" />,
+    icon : <ShieldCheckIcon class="h-5 w-5" />,
     items: ["OAuth2", "JWT", "TLS/SSL", "Pen-testing"],
   },
 ];
@@ -75,7 +73,7 @@ export const TechStack = component$(() => (
                     key={item}
                     class="flex items-center gap-2 text-sm text-gray-300"
                   >
-                    <LuChevronRight class="text-accent h-3 w-3" />
+                    <ChevronRightIcon class="text-accent h-3 w-3" />
                     {" "}
                     {item}
                   </li>

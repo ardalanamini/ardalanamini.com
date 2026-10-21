@@ -1,5 +1,5 @@
 import { type SVGProps, component$ } from "@builder.io/qwik";
-import { SiTelegram } from "@qwikest/icons/simpleicons";
+import { TelegramIcon } from "~/icons/telegram";
 
 export const TelegramLink = component$(({
   wrapperClass,
@@ -12,6 +12,6 @@ export const TelegramLink = component$(({
     class={["hover:text-accent transition-colors", wrapperClass]}
     aria-label="Telegram"
   >
-    <SiTelegram {...properties} />
+    <TelegramIcon {...properties} />
   </a>
 ));

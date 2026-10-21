@@ -1,8 +1,8 @@
 import { component$ } from "@builder.io/qwik";
-import { LuMail } from "@qwikest/icons/lucide";
 import { GithubLink } from "~/components/social-links/github";
 import { LinkedInLink } from "~/components/social-links/linkedin";
 import { TelegramLink } from "~/components/social-links/telegram";
+import { MailIcon } from "~/icons/mail";
 
 export const Contact = component$(() => (
   <section id="connect" class="bg-accent text-bg-dark px-6 py-20">
@@ -26,7 +26,7 @@ export const Contact = component$(() => (
           class="bg-bg-dark flex items-center gap-3 rounded-lg px-10 py-5 font-bold tracking-widest text-white uppercase
             transition-transform hover:scale-105"
         >
-          <LuMail class="h-5 w-5" />
+          <MailIcon class="h-5 w-5" />
           {" "}
           Send Packet
         </a>

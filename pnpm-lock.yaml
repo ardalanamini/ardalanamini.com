@@ -186,9 +186,6 @@ importers:
       '@qwik.dev/partytown':
         specifier: 1.0.1
         version: 1.0.1
-      '@qwikest/icons':
-        specifier: 0.0.13
-        version: 0.0.13(@builder.io/qwik@1.20.2(vite@8.0.16(@types/node@26.6.5)(esbuild@0.28.2)(jiti@2.7.0)(less@4.6.4)(sass@1.99.0)(stylus@0.62.0(supports-color@10.2.2))(yaml@2.9.1)))
       '@tailwindcss/vite':
         specifier: 4.3.3
         version: 4.3.3(vite@8.0.16(@types/node@26.6.5)(esbuild@0.28.2)(jiti@2.7.0)(less@4.6.4)(sass@1.99.0)(stylus@0.62.0(supports-color@10.2.2))(yaml@2.9.1))
@@ -1359,12 +1356,6 @@ packages:
     resolution: {integrity: sha512-mLhQw2uxZOpt5mR7FDUfzs0ibSxIf+CFCtA0Ju0tRO1i0p+VxLWs2jklwWho/rHyjayN2XrmP2PFXyYu7uZsbw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
-
-  '@qwikest/icons@0.0.13':
-    resolution: {integrity: sha512-e0wY8vmx0nDSUiuCATlk+ojTvdBV4txIGHHWjZW5SRkv4XB8H9+3WSDcLPz0ItUdRyzcrohE9k2jtQI/98aRPA==}
-    engines: {node: '>=15.0.0'}
-    peerDependencies:
-      '@builder.io/qwik': '>=1.0.0'
 
   '@rolldown/binding-android-arm64@1.0.3':
     resolution: {integrity: sha512-454rs7jHngixp/NMxd5srYD57OnzSlZ/eFTETjORQHLwJG1lRtmNOJcBerZlfu4GjKqeq8aCCIQrMdHyhI51Hw==}
@@ -4398,10 +4389,6 @@ snapshots:
   '@poppinss/exception@1.2.3': {}
 
   '@qwik.dev/partytown@1.0.1': {}
-
-  '@qwikest/icons@0.0.13(@builder.io/qwik@1.20.2(vite@8.0.16(@types/node@26.6.5)(esbuild@0.28.2)(jiti@2.7.0)(less@4.6.4)(sass@1.99.0)(stylus@0.62.0(supports-color@10.2.2))(yaml@2.9.1)))':
-    dependencies:
-      '@builder.io/qwik': 1.20.2(vite@8.0.16(@types/node@26.6.5)(esbuild@0.28.2)(jiti@2.7.0)(less@4.6.4)(sass@1.99.0)(stylus@0.62.0(supports-color@10.2.2))(yaml@2.9.1))
 
   '@rolldown/binding-android-arm64@1.0.3':
     optional: true

@@ -9,13 +9,11 @@
     },
   },
   "file_scan_exclusions": [
+    "...",
+    "node_modules",
+    "dist",
     "server",
     "tmp",
-    "**/.git",
-    "**/.wrangler",
-    "**/node_modules",
-    "**/dist",
-    "**/.DS_Store",
-    "**/*.tsbuildinfo",
+    ".wrangler",
   ],
 }

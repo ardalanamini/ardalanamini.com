@@ -1,5 +1,12 @@
-# TODO: remove this
-minimumReleaseAge: 0
+injectWorkspacePackages: true
+
+minimumReleaseAge: 1440
+minimumReleaseAgeStrict: true
+
+autoDedupe: true
+
+lockfile:
+  includeResolutionSettings: true
 
 overrides:
   "@builder.io/qwik-city>vite": 8.0.16

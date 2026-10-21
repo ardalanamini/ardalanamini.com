@@ -1,5 +1,5 @@
-import type { PartytownConfig } from "@qwik.dev/partytown/integration";
-import { partytownSnippet } from "@qwik.dev/partytown/integration";
+import type { JSXOutput } from "@builder.io/qwik";
+import { type PartytownConfig, partytownSnippet } from "@qwik.dev/partytown/integration";
 
 /**
  * Props for `<QwikPartytown/>`, which extends the Partytown Config.
@@ -14,6 +14,6 @@ export type PartytownProps = PartytownConfig;
  * @public
  * You can pass setting with props
  */
-export const QwikPartytown = (props: PartytownProps): any => {
-  return <script dangerouslySetInnerHTML={partytownSnippet(props)} />;
-};
+export function QwikPartytown(properties: PartytownProps): JSXOutput {
+  return <script dangerouslySetInnerHTML={partytownSnippet(properties)} />;
+}

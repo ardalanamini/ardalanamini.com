@@ -11,21 +11,23 @@
  *
  */
 import {
-  renderToStream,
   type RenderToStreamOptions,
+  type RenderToStreamResult,
+  renderToStream,
 } from "@builder.io/qwik/server";
 import Root from "./root";
 
-export default function (opts: RenderToStreamOptions) {
+export default async function entry(options: RenderToStreamOptions): Promise<RenderToStreamResult> {
   return renderToStream(<Root />, {
-    ...opts,
+    ...options,
+
     // Use container attributes to set attributes on the html tag.
     containerAttributes: {
       lang: "en-us",
-      ...opts.containerAttributes,
+      ...options.containerAttributes,
     },
     serverData: {
-      ...opts.serverData,
+      ...options.serverData,
     },
   });
 }

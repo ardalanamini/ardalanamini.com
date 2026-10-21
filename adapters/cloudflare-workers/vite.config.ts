@@ -1,23 +1,21 @@
-import { cloudflarePagesAdapter as cloudflareWorkersAdapter } from "@builder.io/qwik-city/adapters/cloudflare-pages/vite";
+import { cloudflarePagesAdapter } from "@builder.io/qwik-city/adapters/cloudflare-pages/vite";
 import { extendConfig } from "@builder.io/qwik-city/vite";
 import baseConfig from "../../vite.config";
 
-export default extendConfig(baseConfig, () => {
-  return {
-    build: {
-      ssr: true,
-      rollupOptions: {
-        input: ["src/entry.cloudflare-pages.tsx", "@qwik-city-plan"],
-      },
+export default extendConfig(baseConfig, () => ({
+  build: {
+    ssr            : true,
+    rolldownOptions: {
+      input: ["src/entry.cloudflare-pages.tsx", "@qwik-city-plan"],
     },
-    plugins: [
-      cloudflareWorkersAdapter({
-        ssg: {
-          include: ["/*"],
-          origin: "https://ardalanamini.com",
-          sitemapOutFile: "sitemap.xml",
-        },
-      }),
-    ],
-  };
-});
+  },
+  plugins: [
+    cloudflarePagesAdapter({
+      ssg: {
+        include       : ["/*"],
+        origin        : "https://ardalanamini.com",
+        sitemapOutFile: "sitemap.xml",
+      },
+    }),
+  ],
+}));

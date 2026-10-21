@@ -8,76 +8,68 @@ import { Hero } from "~/components/hero/hero";
 import { Projects } from "~/components/projects/projects";
 import { TechStack } from "~/components/tech-stack/tech-stack";
 
-export default component$(() => {
-  return (
-    <div class="grid-bg min-h-screen">
-      <Header />
-
-      <Hero />
-
-      <Projects />
-
-      <Experience />
-
-      <TechStack />
-
-      <Contact />
-
-      <Footer />
-    </div>
-  );
-});
+export default component$(() => (
+  <div class="grid-bg min-h-screen">
+    <Header />
+    <Hero />
+    <Projects />
+    <Experience />
+    <TechStack />
+    <Contact />
+    <Footer />
+  </div>
+));
 
 export const head: DocumentHead = {
   title: "Ardalan Amini",
-  meta: [
+  meta : [
     {
-      name: "description",
+      name   : "description",
       content: "Ardalan Amini Personal Website",
     },
 
     // Twitter Meta Tags
     {
-      name: "twitter:card",
+      name   : "twitter:card",
       content: "summary_large_image",
     },
     {
-      name: "twitter:title",
+      name   : "twitter:title",
       content: "Ardalan Amini",
     },
     {
-      name: "twitter:description",
+      name   : "twitter:description",
       content: "Ardalan Amini Personal Website",
     },
     {
-      name: "twitter:image",
+      name   : "twitter:image",
       content: "https://ardalanamini.com/og.webp",
     },
 
     // Facebook Meta Tags
     {
       property: "og:url",
-      content: "https://ardalanamini.com/",
+      content : "https://ardalanamini.com/",
     },
     {
       property: "og:type",
-      content: "website",
+      content : "website",
     },
     {
       property: "og:title",
-      content: "Ardalan Amini",
+      content : "Ardalan Amini",
     },
     {
       property: "og:description",
-      content: "Ardalan Amini Personal Website",
+      content : "Ardalan Amini Personal Website",
     },
     {
       property: "og:image",
-      content: "https://ardalanamini.com/og.webp",
+      content : "https://ardalanamini.com/og.webp",
     },
     {
       property: "og:image:alt",
-      content: "Ardalan Amini",
+      content : "Ardalan Amini",
     },
   ],
 };

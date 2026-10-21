@@ -1,9 +1,63 @@
 {
+  "languages": {
+    "JavaScript": {
+      "language_servers": [
+        "!eslint",
+        "...",
+      ],
+      "format_on_save": "on",
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [],
+      "code_actions_on_format": {
+        "source.fixAll.oxc": true,
+      },
+    },
+    "TypeScript": {
+      "language_servers": [
+        "!eslint",
+        "!vtsls",
+        "typescript-ls",
+        "...",
+      ],
+      "format_on_save": "on",
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [],
+      "code_actions_on_format": {
+        "source.fixAll.oxc": true,
+      },
+    },
+    "TSX": {
+      "language_servers": [
+        "!eslint",
+        "!vtsls",
+        "typescript-ls",
+        "...",
+      ],
+      "format_on_save": "on",
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [],
+      "code_actions_on_format": {
+        "source.fixAll.oxc": true,
+      },
+    },
+  },
   "lsp": {
-    "eslint": {
-      "settings": {
-        "experimental": {
-          "useFlatConfig": false,
+    "oxlint": {
+      "initialization_options": {
+        "settings": {
+          "configPath": "./oxlint.config.ts",
+          "tsConfigPath": "./tsconfig.json",
+          "typeAware": true,
+          "disableNestedConfig": false,
+          "fixKind": "safe_fix_or_suggestion",
+          "run": "onType",
+          "unusedDisableDirectives": "deny",
         },
       },
     },

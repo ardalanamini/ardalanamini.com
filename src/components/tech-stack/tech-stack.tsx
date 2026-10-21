@@ -8,7 +8,7 @@ import {
 } from "@qwikest/icons/lucide";
 import { revealOnce$ } from "~/integrations/reveal";
 
-export const TECH_STACK = [
+const TECH_STACK = [
   {
     name : "Languages",
     icon : <LuCode class="h-5 w-5" />,

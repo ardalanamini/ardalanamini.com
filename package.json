@@ -35,9 +35,9 @@
     "prepare": "is-ci || lefthook install"
   },
   "engines": {
-    "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+    "node": ">=26.12.0"
   },
-  "engines-annotation": "Mostly required by sharp which needs a Node-API v9 compatible runtime",
+  "engines-annotation": "Build scripts and tests use native TypeScript imports; the minimum matches .node-version",
   "packageManager": "pnpm@12.14.0",
   "type": "module",
   "devDependencies": {

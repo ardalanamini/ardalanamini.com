@@ -1,4 +1,5 @@
 import { type SVGProps, component$ } from "@builder.io/qwik";
+import { SOCIAL_LINKS } from "~/content/home";
 import { TelegramIcon } from "~/icons/telegram";
 
 export const TelegramLink = component$(({
@@ -6,11 +7,11 @@ export const TelegramLink = component$(({
   ...properties
 }: SVGProps<SVGSVGElement> & { wrapperClass?: string; }) => (
   <a
-    href="https://t.me/ardalanamini"
+    href={SOCIAL_LINKS.telegram.url}
     rel="noopener noreferrer"
     target="_blank"
     class={["hover:text-accent transition-colors", wrapperClass]}
-    aria-label="Telegram"
+    aria-label={SOCIAL_LINKS.telegram.label}
   >
     <TelegramIcon {...properties} />
   </a>

@@ -78,6 +78,30 @@ pnpm serve
 
 Then visit [http://localhost:8787/](http://localhost:8787/)
 
+### Markdown responses
+
+The homepage returns Markdown when `Accept` explicitly prefers `text/markdown` over HTML, including equal quality weights.
+Missing headers and wildcard-only requests return HTML. Both representations support `GET` and `HEAD` and use
+`Vary: Accept` with `Cache-Control: no-store`; static asset caching is unchanged.
+
+Homepage content lives in `src/content/home.ts`. The HTML components and `src/markdown/home.ts` use that data, with
+`mdast-util-to-markdown` serializing the Markdown document. The build writes `dist/index.md` alongside the prerendered HTML.
+Use the Node version in `.node-version` for the build scripts and tests.
+`pnpm test` builds the site before testing the Markdown output, shared response handling, and compiled Worker entry point.
+
+To verify production behavior locally, run `pnpm build`, then `pnpm serve`:
+
+```shell
+curl -H 'Accept: text/markdown' http://localhost:8787/
+curl -I -H 'Accept: text/markdown' http://localhost:8787/
+pnpm test
+```
+
+Negotiation runs in the Cloudflare Worker; plain Vite development and preview continue serving HTML.
+For a future page, add its Markdown renderer and build output in `scripts/build-markdown.mjs`, register the artifact in
+`MARKDOWN_PAGES` in `src/markdown/response.ts`, and add its URL to `assets.run_worker_first` in `wrangler.jsonc`.
+The shared `serveMarkdownPage` helper can be reused by another host's request handler and asset-fetching adapter.
+
 ### Deployments
 
 [Cloudflare Workers](https://workers.cloudflare.com/) can be deployed using the [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/).

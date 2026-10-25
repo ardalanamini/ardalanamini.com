@@ -2,33 +2,33 @@ import { component$ } from "@builder.io/qwik";
 import { GithubLink } from "~/components/social-links/github";
 import { LinkedInLink } from "~/components/social-links/linkedin";
 import { TelegramLink } from "~/components/social-links/telegram";
+import { CONTACT } from "~/content/home";
 import { MailIcon } from "~/icons/mail";
 
 export const Contact = component$(() => (
   <section id="connect" class="bg-accent text-bg-dark px-6 py-20">
     <div class="mx-auto max-w-4xl text-center">
       <h2 class="mb-8 text-5xl font-black tracking-tighter uppercase md:text-7xl">
-        Establish
+        {CONTACT.title[0]}
         {" "}
         <br />
         {" "}
-        Connection
+        {CONTACT.title[1]}
       </h2>
 
       <p class="mb-12 text-lg font-bold opacity-80">
-        Available for architectural consulting and high-performance software
-        engineering.
+        {CONTACT.description}
       </p>
 
       <div class="flex flex-wrap justify-center gap-6">
         <a
-          href="mailto:ardalanamini22@gmail.com"
+          href={`mailto:${ CONTACT.email }`}
           class="bg-bg-dark flex items-center gap-3 rounded-lg px-10 py-5 font-bold tracking-widest text-white uppercase
             transition-transform hover:scale-105"
         >
           <MailIcon class="h-5 w-5" />
           {" "}
-          Send Packet
+          {CONTACT.emailLabel}
         </a>
 
         <div class="flex gap-4">

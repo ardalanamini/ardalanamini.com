@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { EXPERIENCES } from "~/components/experience/experience";
-import { PROJECTS } from "~/components/projects/projects";
+import { EXPERIENCE_SUMMARY, PROFILE } from "~/content/home";
 import { ActivityIcon } from "~/icons/activity";
 import { revealOnce$ } from "~/integrations/reveal";
 
@@ -26,20 +25,20 @@ export const Hero = component$(() => (
         >
           <ActivityIcon class="h-3 w-3" />
           {" "}
-          Open for Opportunities
+          {PROFILE.availability}
         </div>
 
         <h1 class="mb-6 text-5xl leading-tight font-black md:text-7xl">
-          Engineering
+          {PROFILE.headline[0]}
           {" "}
           <br />
-          <span class="text-accent">Resilient</span>
+          <span class="text-accent">{PROFILE.headline[1]}</span>
           {" "}
-          Systems.
+          {PROFILE.headline[2]}
         </h1>
 
         <p class="mb-8 max-w-lg text-lg leading-relaxed text-gray-300">
-          I build the invisible engines that power the modern web.
+          {PROFILE.introduction}
         </p>
 
         <div class="flex flex-wrap gap-4">
@@ -69,9 +68,7 @@ export const Hero = component$(() => (
           </div>
 
           <div class="mb-4 text-gray-300">
-            I'm Ardalan Amini, Software Engineer specializing in distributed
-            systems, high-performance infrastructure, and scalable cloud
-            solutions.
+            {PROFILE.biography}
           </div>
 
           <div class="mb-2 flex gap-2">
@@ -81,10 +78,7 @@ export const Hero = component$(() => (
           </div>
 
           <div class="text-accent mb-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
-            <div>• Distributed_Systems</div>
-            <div>• API_Design</div>
-            <div>• Database_Optimization</div>
-            <div>• Cloud_Native</div>
+            {PROFILE.skills.map(skill => <div key={skill}>• {skill}</div>)}
           </div>
 
           <div class="mb-2 flex gap-2">
@@ -94,10 +88,7 @@ export const Hero = component$(() => (
           </div>
 
           <div class="text-gray-300">
-            {/* oxlint-disable-next-line no-magic-numbers */}
-            {new Date().getFullYear() - 2016} years of experience,{" "}
-            {EXPERIENCES.length} roles, {PROJECTS.length}+ personal projects,
-            1 motivated software engineer
+            {EXPERIENCE_SUMMARY}
           </div>
 
           <div class="mt-4 flex animate-pulse gap-2">

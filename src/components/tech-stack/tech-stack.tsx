@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { SECTIONS, TECH_STACK } from "~/content/home";
 import { ChevronRightIcon } from "~/icons/chevron-right";
 import { CodeIcon } from "~/icons/code";
 import { DatabaseIcon } from "~/icons/database";
@@ -6,28 +7,12 @@ import { ServerIcon } from "~/icons/server";
 import { ShieldCheckIcon } from "~/icons/shield-check";
 import { revealOnce$ } from "~/integrations/reveal";
 
-const TECH_STACK = [
-  {
-    name : "Languages",
-    icon : <CodeIcon class="h-5 w-5" />,
-    items: ["TypeScript", "Go", "PHP", "C++"],
-  },
-  {
-    name : "Databases & Storage",
-    icon : <DatabaseIcon class="h-5 w-5" />,
-    items: ["MongoDB", "PostgreSQL", "Redis", "S3"],
-  },
-  {
-    name : "Infrastructure",
-    icon : <ServerIcon class="h-5 w-5" />,
-    items: ["Kubernetes", "Docker", "AWS", "Terraform"],
-  },
-  {
-    name : "Security",
-    icon : <ShieldCheckIcon class="h-5 w-5" />,
-    items: ["OAuth2", "JWT", "TLS/SSL", "Pen-testing"],
-  },
-];
+const STACK_ICONS = {
+  "Languages"          : <CodeIcon class="h-5 w-5" />,
+  "Databases & Storage": <DatabaseIcon class="h-5 w-5" />,
+  "Infrastructure"     : <ServerIcon class="h-5 w-5" />,
+  "Security"           : <ShieldCheckIcon class="h-5 w-5" />,
+};
 
 export const TechStack = component$(() => (
   <section
@@ -36,11 +21,10 @@ export const TechStack = component$(() => (
   >
     <div class="mx-auto max-w-7xl">
       <div class="mb-16 text-center">
-        <h2 class="mb-4 text-4xl font-bold">Tech Stack</h2>
+        <h2 class="mb-4 text-4xl font-bold">{SECTIONS.techStack.title}</h2>
 
         <p class="mx-auto max-w-xl text-gray-300">
-          The foundational technologies I use to build scalable, secure, and
-          performant backend infrastructures.
+          {SECTIONS.techStack.description}
         </p>
       </div>
 
@@ -60,7 +44,7 @@ export const TechStack = component$(() => (
               </span>
 
               <div class="text-accent/80 group-hover:text-accent transition-colors">
-                {stack.icon}
+                {STACK_ICONS[stack.name]}
               </div>
             </div>
 

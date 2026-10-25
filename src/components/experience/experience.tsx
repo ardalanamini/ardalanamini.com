@@ -1,73 +1,17 @@
 import { component$ } from "@builder.io/qwik";
+import { EXPERIENCES, SECTIONS } from "~/content/home";
 import { ActivityIcon } from "~/icons/activity";
 import { ChevronRightIcon } from "~/icons/chevron-right";
 import { revealOnce$ } from "~/integrations/reveal";
-
-export const EXPERIENCES = [
-  {
-    company     : "Xcoins",
-    role        : "Senior Software Engineer - Back End Team Lead",
-    period      : "Sep 2022 - Nov 2025",
-    description : "Crypto currency exchange and payment processing platform.",
-    achievements: [
-      "Nest.js",
-      "TypeScript",
-      "PostgreSQL",
-      "Docker",
-      "Kubernetes",
-    ],
-  },
-  {
-    company: "AdaKerja",
-    role   : "Senior Software Engineer",
-    period : "Jul 2020 — Jul 2022",
-    description:
-      "Attendance & Payroll management system that consists of two sides, employers & job seekers.",
-    achievements: [
-      "Express.js",
-      "TypeScript",
-      "MongoDB",
-      "Docker",
-      "AWS Lambda",
-    ],
-  },
-  {
-    company: "AInfluencer",
-    role   : "Senior Back End Developer",
-    period : "Jul 2019 — Jul 2020",
-    description:
-      "AI-based Instagram social marketing platform, editing, suggesting & automating posts & stories for influencers"
-      + " & connecting them to the suitable accounts for advertisement purposes.",
-    achievements: ["Express.js", "TypeScript", "Laravel", "MongoDB", "CI/CD"],
-  },
-  {
-    company: "Chibaki",
-    role   : "Senior Back End Developer",
-    period : "Aug 2018 — Feb 2019",
-    description:
-      "Online platform to find local professionals suitable for the posted jobs that consisted of two sides,"
-      + " employers & professionals.",
-    achievements: ["Express.js", "Mongoose.js", "Jest", "MongoDB", "Docker"],
-  },
-  {
-    company: "Jahangostar Pars Raden",
-    role   : "Software Engineer",
-    period : "Nov 2016 — Sep 2018",
-    description:
-      "Cloud based human resource management system allowing HR teams and business owners to manage and automate"
-      + " contracts, attendances, leaves & salaries.",
-    achievements: ["Laravel", "MariaDB", "React.js", "Redis", "Docker"],
-  },
-];
 
 export const Experience = component$(() => (
   <section id="experience" class="px-6 py-20">
     <div class="mx-auto max-w-4xl">
       <div class="mb-16">
-        <h2 class="mb-2 text-3xl font-bold">Experience</h2>
+        <h2 class="mb-2 text-3xl font-bold">{SECTIONS.experience.title}</h2>
 
         <p class="text-sm tracking-widest text-gray-400 uppercase">
-          System Logs // Professional Experience
+          {SECTIONS.experience.description}
         </p>
       </div>
 

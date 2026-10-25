@@ -35,10 +35,9 @@
     "prepare": "is-ci || lefthook install"
   },
   "engines": {
-    "node": ">=26.12.0"
+    "node": ">=26.12.1"
   },
-  "engines-annotation": "Build scripts and tests use native TypeScript imports; the minimum matches .node-version",
-  "packageManager": "pnpm@12.14.0",
+  "packageManager": "pnpm@12.15.0",
   "type": "module",
   "devDependencies": {
     "@commitlint/cli": "21.2.4",

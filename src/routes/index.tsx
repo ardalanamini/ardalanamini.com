@@ -7,6 +7,7 @@ import { Header } from "~/components/header/header";
 import { Hero } from "~/components/hero/hero";
 import { Projects } from "~/components/projects/projects";
 import { TechStack } from "~/components/tech-stack/tech-stack";
+import { PROFILE } from "~/content/home";
 
 export default component$(() => (
   <div class="grid-bg min-h-screen">
@@ -21,11 +22,11 @@ export default component$(() => (
 ));
 
 export const head: DocumentHead = {
-  title: "Ardalan Amini",
+  title: PROFILE.name,
   meta : [
     {
       name   : "description",
-      content: "Ardalan Amini Personal Website",
+      content: `${ PROFILE.name } Personal Website`,
     },
 
     // Twitter Meta Tags
@@ -35,11 +36,11 @@ export const head: DocumentHead = {
     },
     {
       name   : "twitter:title",
-      content: "Ardalan Amini",
+      content: PROFILE.name,
     },
     {
       name   : "twitter:description",
-      content: "Ardalan Amini Personal Website",
+      content: `${ PROFILE.name } Personal Website`,
     },
     {
       name   : "twitter:image",
@@ -57,11 +58,11 @@ export const head: DocumentHead = {
     },
     {
       property: "og:title",
-      content : "Ardalan Amini",
+      content : PROFILE.name,
     },
     {
       property: "og:description",
-      content : "Ardalan Amini Personal Website",
+      content : `${ PROFILE.name } Personal Website`,
     },
     {
       property: "og:image",
@@ -69,7 +70,7 @@ export const head: DocumentHead = {
     },
     {
       property: "og:image:alt",
-      content : "Ardalan Amini",
+      content : PROFILE.name,
     },
   ],
 };

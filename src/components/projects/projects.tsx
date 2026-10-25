@@ -1,44 +1,10 @@
 import { component$ } from "@builder.io/qwik";
+import { PROJECTS, SECTIONS } from "~/content/home";
 import { ArrowLeftIcon } from "~/icons/arrow-left";
 import { ArrowRightIcon } from "~/icons/arrow-right";
 import { ChevronRightIcon } from "~/icons/chevron-right";
 import { ExternalLinkIcon } from "~/icons/external-link";
 import { revealOnce$ } from "~/integrations/reveal";
-
-export const PROJECTS = [
-  {
-    title: "Foxify",
-    description:
-      "A fast, easy to use & typescript ready web framework for Node.js",
-    metrics: ["152 Stars", "MIT License", "v0.10.7"],
-    tech   : ["TypeScript", "Pnpm"],
-    link   : "https://github.com/foxifyjs/foxify",
-  },
-  {
-    title: "Kutt.it Node.js Client",
-    description:
-      "Node.js & browser (TypeScript) client for Kutt url shortener.",
-    metrics: ["40 Stars", "MIT License", "v3.0.2"],
-    tech   : ["TypeScript"],
-    link   : "https://github.com/ardalanamini/node-kutt",
-  },
-  {
-    title: "Github Automatic Changelog",
-    description:
-      "A GitHub action that automatically generates changelogs from commit messages.",
-    metrics: ["28 Stars", "MIT License", "v4.0.6"],
-    tech   : ["Node.js", "TypeScript", "GitHub Actions"],
-    link   : "https://github.com/ardalanamini/auto-changelog",
-  },
-  {
-    title: "Prototyped.js",
-    description:
-      "Common Typescript ready helpers & prototypes available for both Server-Side and Client-Side applications.",
-    metrics: ["25 Stars", "MIT License", "v3.0.5"],
-    tech   : ["TypeScript"],
-    link   : "https://github.com/ardalanamini/prototyped.js",
-  },
-];
 
 export const Projects = component$(() => (
   <section
@@ -48,10 +14,10 @@ export const Projects = component$(() => (
     <div class="mx-auto max-w-7xl">
       <div class="mb-16 flex flex-col items-end justify-between gap-6 md:flex-row">
         <div>
-          <h2 class="mb-2 text-3xl font-bold">Projects</h2>
+          <h2 class="mb-2 text-3xl font-bold">{SECTIONS.projects.title}</h2>
 
           <p class="text-sm tracking-widest text-gray-400 uppercase">
-            Open Source Repositories & Contributions
+            {SECTIONS.projects.description}
           </p>
         </div>
 

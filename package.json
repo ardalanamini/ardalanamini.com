@@ -35,10 +35,9 @@
     "prepare": "is-ci || lefthook install"
   },
   "engines": {
-    "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+    "node": ">=26.12.1"
   },
-  "engines-annotation": "Mostly required by sharp which needs a Node-API v9 compatible runtime",
-  "packageManager": "pnpm@12.14.0",
+  "packageManager": "pnpm@12.15.0",
   "type": "module",
   "devDependencies": {
     "@commitlint/cli": "21.2.4",

@@ -45,21 +45,21 @@
     "@commitlint/types": "21.2.3",
     "@builder.io/qwik": "1.20.2",
     "@builder.io/qwik-city": "1.20.2",
-    "@qwik.dev/partytown": "1.0.1",
+    "@qwik.dev/partytown": "1.0.2",
     "@tailwindcss/vite": "4.3.3",
     "@types/mdast": "4.0.4",
     "@types/node": "26.6.5",
     "eslint-plugin-qwik": "1.20.2",
     "is-ci": "4.1.0",
-    "knip": "6.42.1",
+    "knip": "6.43.0",
     "lefthook": "2.2.2",
     "mdast-util-to-markdown": "2.2.0",
     "oxlint": "1.89.0",
     "oxlint-config-noir": "1.0.8",
-    "oxlint-tsgolint": "7.0.2004",
+    "oxlint-tsgolint": "7.0.2005",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3",
     "vite": "8.0.16",
-    "wrangler": "4.151.3"
+    "wrangler": "4.152.0"
   }
 }
